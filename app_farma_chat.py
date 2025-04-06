@@ -5,7 +5,7 @@ from together import Together
 client = Together(api_key="9cfc1d9c8b5b63305c5ee594e2e4513126c535b557b28592ef7729672a5120bb")
 
 # Configuración de la interfaz
-st.title("Asistente Farmacéutico")
+st.title("Aplicación para cribado inicial de enfermedades en la farmacia")
 
 # Inicializar los chats con el contexto farmacéutico único
 if "general_chat" not in st.session_state:   
@@ -97,4 +97,4 @@ def chat_interface(chat_key, chat_history):
             chat_history.append({"role": "assistant", "content": response_text})
 
 # Manejar el chat general
-chat_interface("General", st.session_state.general_chat)
+chat_interface("Farma", st.session_state.general_chat)
